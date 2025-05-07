@@ -1,0 +1,67 @@
+/* Full-screen flex center */
+.production-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 1rem;
+  }
+  
+  /* Horizontal card-style box */
+  .production-container {
+    display: flex;
+    flex-direction: row; /* Change to 'row' if you want side-by-side layout inside */
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .production-header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Status and error text */
+  .production-status {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  .production-status.error {
+    color: #d32f2f;
+  }
+  
+  /* Button */
+  .production-print-button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .production-print-button:hover {
+    background-color: #1259a3;
+  }
+  
+  /* Responsive adjustment */
+  @media (max-width: 768px) {
+    .production-container {
+      padding: 1.5rem;
+    }
+  }
+  
