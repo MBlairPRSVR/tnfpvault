@@ -4,7 +4,7 @@ import { Container, Button, AppBar, Toolbar, Typography, Box } from '@mui/materi
 import ProductionTemplate from './pages/ProductionTemplate';
 import MenuMaker from './pages/MenuMaker';
 import FileVault from './pages/FileVault';
-import Dashboard from './pages/Dashboard';  // ✅ Add this import
+import Dashboard from './pages/DashBoard'; // ✅ Make sure this matches the filename
 
 const Home = () => (
   <Typography variant="h4" gutterBottom>
@@ -28,7 +28,6 @@ const App = () => {
       </AppBar>
 
       <Container sx={{ mt: 4 }}>
-        {/* Navigation Bar */}
         <Box sx={{ mb: 2 }}>
           <Button component={Link} to="/" variant="outlined" sx={{ mr: 2 }}>
             Home
@@ -44,16 +43,15 @@ const App = () => {
           </Button>
           <Button component={Link} to="/dashboard" variant="contained" sx={{ mr: 2 }}>
             Dashboard
-          </Button>  {/* New Dashboard Button */}
+          </Button>
         </Box>
 
-        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/production-template" element={<ProductionTemplate />} />
           <Route path="/menu-maker" element={<MenuMaker />} />
           <Route path="/file-vault" element={<FileVault />} />
-          <Route path="/dashboard" element={<Dashboard />} /> {/* New Dashboard Route */}
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
